@@ -98,8 +98,3 @@ Deno.test("[lib/isEqualTo] should fail when actual is not equal to expected for 
 Deno.test("[lib/isEqualTo] should fail when actual is not equal to expected for objects", function (): void {
   assertThrows(() => assert({key: "value"}).isEqualTo({key: "valu2"}));
 });
-
-
-
-
-

@@ -21,12 +21,16 @@ import { assert } from "https://deno.land/x/denoassert";
 Asserts `actual` is equal to `expected`
 
 ```typescript
-assert(1).isEqualTo(1);
-assert(true).isEqualTo(true);
-assert([1, 2, 3]).isEqualTo([1, 2, 3]);
-assert({key: "value"}).isEqualTo({key: "value"});
+assert(actual).isEqualTo(expected);
 ```
 
+#### isNotEqualTo
+
+Asserts `actual` is not equal to `expected`
+
+```typescript
+assert(actual).isNotEqualTo(expected);
+```
 
 ### Chaining Multiple Assertions
 
