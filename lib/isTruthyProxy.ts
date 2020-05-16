@@ -1,4 +1,4 @@
-import {equal} from "https://deno.land/std/testing/asserts.ts";
+import { equal } from "https://deno.land/std/testing/asserts.ts";
 
 export function isTruthyProxy(actual: any, self: any) {
   return function (): any {
@@ -7,5 +7,5 @@ export function isTruthyProxy(actual: any, self: any) {
     }
 
     return self;
-  }
+  };
 }

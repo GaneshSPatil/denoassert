@@ -1,6 +1,6 @@
-import {assertThrows} from "https://deno.land/std/testing/asserts.ts";
+import { assertThrows } from "https://deno.land/std/testing/asserts.ts";
 
-import {assert} from "../index.ts";
+import { assert } from "../index.ts";
 
 Deno.test("[lib/isNotEqualTo] should fail when actual is not equal to expected for numbers", function (): void {
   assert(0).isNotEqualTo(1);
@@ -41,13 +41,12 @@ Deno.test("[lib/isNotEqualTo] should fail when actual is not equal to expected f
 });
 
 Deno.test("[lib/isNotEqualTo] should fail when actual is not equal to expected for array of objects", function (): void {
-  assert([{}, {key: "value"}]).isNotEqualTo([{}, {key: "valu2"}]);
+  assert([{}, { key: "value" }]).isNotEqualTo([{}, { key: "valu2" }]);
 });
 
 Deno.test("[lib/isNotEqualTo] should fail when actual is not equal to expected for objects", function (): void {
-  assert({key: "value"}).isNotEqualTo({key: "valu2"});
+  assert({ key: "value" }).isNotEqualTo({ key: "valu2" });
 });
-
 
 // failure tests
 
@@ -91,10 +90,12 @@ Deno.test("[lib/isNotEqualTo] should not fail when actual is equal to expected f
 
 Deno.test("[lib/isNotEqualTo] should not fail when actual is equal to expected for array of objects", function (): void {
   assertThrows(() => assert([]).isNotEqualTo([]));
-  assertThrows(() => assert([{}, {key: "value"}]).isNotEqualTo([{}, {key: "value"}]));
+  assertThrows(() =>
+    assert([{}, { key: "value" }]).isNotEqualTo([{}, { key: "value" }])
+  );
 });
 
 Deno.test("[lib/isNotEqualTo] should not fail when actual is equal to expected for objects", function (): void {
   assertThrows(() => assert({}).isNotEqualTo({}));
-  assertThrows(() => assert({key: "value"}).isNotEqualTo({key: "value"}));
+  assertThrows(() => assert({ key: "value" }).isNotEqualTo({ key: "value" }));
 });

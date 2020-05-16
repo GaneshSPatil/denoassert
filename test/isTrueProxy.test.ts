@@ -1,6 +1,6 @@
-import {assertThrows} from "https://deno.land/std/testing/asserts.ts";
+import { assertThrows } from "https://deno.land/std/testing/asserts.ts";
 
-import {assert} from "../index.ts";
+import { assert } from "../index.ts";
 
 Deno.test("[lib/isTrue] should not fail when actual is true", function (): void {
   assert(true).isTrue();
@@ -15,5 +15,5 @@ Deno.test("[lib/isTrue] should fail when actual is not true", function (): void 
   assertThrows(() => assert([]).isTrue());
   assertThrows(() => assert([1, 2]).isTrue());
   assertThrows(() => assert({}).isTrue());
-  assertThrows(() => assert({"key": "value"}).isTrue());
+  assertThrows(() => assert({ "key": "value" }).isTrue());
 });
