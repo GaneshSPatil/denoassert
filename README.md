@@ -17,20 +17,56 @@ import { assert } from "https://deno.land/x/denoassert";
 ### Assertions
 
 #### isEqualTo
-
-Asserts `actual` is equal to `expected`
+Asserts `actual` is equal to `expected`.
 
 ```typescript
 assert(actual).isEqualTo(expected);
 ```
 
-#### isNotEqualTo
 
-Asserts `actual` is not equal to `expected`
+#### isNotEqualTo
+Asserts `actual` is not equal to `expected`.
 
 ```typescript
 assert(actual).isNotEqualTo(expected);
 ```
+
+
+#### isTrue
+Asserts `actual` is true. 
+Note: the `actual` value needs to be `true`. This assertions will fail for truthy values such as positive numbers, arrays, objects, etc.   
+To verify whether `actual` is evaluated to true, use `isTruthy` instead.
+ 
+```typescript
+assert(actual).isTrue();
+```
+
+
+#### isFalse
+Asserts `actual` is false. 
+Note: the `actual` value needs to be `false`. This assertions will fail for falsy values such as zero, null, undefined, empty strings, etc.   
+To verify whether `actual` is evaluated to false, use `isFalsy` instead.
+ 
+```typescript
+assert(actual).isFalse();
+```
+
+
+#### isTruthy
+Asserts `actual` is evaluated to true.
+
+```typescript
+assert(actual).isTruthy();
+```
+
+
+#### isFalsy
+Asserts `actual` is evaluated to false.
+
+```typescript
+assert(actual).isFalsy();
+```
+
 
 ### Chaining Multiple Assertions
 
