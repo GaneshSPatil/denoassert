@@ -2,6 +2,8 @@
 
 An extensible assertion library for deno.
 
+[![Build Status](https://github.com/GaneshSPatil/denoassert/workflows/ci/badge.svg?branch=master)](https://github.com/GaneshSPatil/denoassert/actions)
+
 ## Features
 
 * Provides fluent assertions.
